@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.pdfsam</groupId>
 		<artifactId>pdfsam-parent</artifactId>
-		<version>4.0.2-SNAPSHOT</version>
+		<version>4.0.1</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
@@ -412,15 +412,14 @@
 									<goal>jdeb</goal>
 								</goals>
 								<configuration>
-									<deb>[[buildDir]]/pdfsam_[[version]]-1_amd64.[[extension]]</deb>
+									<deb>[[buildDir]]/pdfsam_[[version]]-1_all.[[extension]]</deb>
 									<dataSet>
 										<data>
 											<src>${project.build.directory}/assembled/bin/pdfsam.sh</src>
-											<dst>pdfsam-basic</dst>
+											<dst>/opt/pdfsam-basic/bin/pdfsam-basic</dst>
 											<type>file</type>
 											<mapper>
 												<type>perm</type>
-												<prefix>/opt/pdfsam-basic/bin</prefix>
 												<filemode>755</filemode>
 											</mapper>
 										</data>

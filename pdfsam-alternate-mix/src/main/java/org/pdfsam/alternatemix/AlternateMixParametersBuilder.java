@@ -18,15 +18,16 @@
  */
 package org.pdfsam.alternatemix;
 
-import java.util.Set;
-
 import org.pdfsam.support.params.AbstractPdfOutputParametersBuilder;
 import org.pdfsam.support.params.SingleOutputTaskParametersBuilder;
+import org.pdfsam.task.AlternateMixMultipleInputParameters;
 import org.sejda.common.collection.NullSafeSet;
 import org.sejda.model.input.PdfMixInput;
 import org.sejda.model.output.FileTaskOutput;
-import org.sejda.model.parameter.AlternateMixMultipleInputParameters;
 
+import java.util.Set;
+
+//import org.sejda.model.parameter.AlternateMixMultipleInputParameters;
 /**
  * Builder for the {@link AlternateMixMultipleInputParameters}
  * 

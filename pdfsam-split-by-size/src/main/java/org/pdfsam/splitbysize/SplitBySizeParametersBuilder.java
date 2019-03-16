@@ -21,6 +21,8 @@ package org.pdfsam.splitbysize;
 import org.pdfsam.support.params.SplitParametersBuilder;
 import org.sejda.model.parameter.SplitBySizeParameters;
 
+import org.pdfsam.task.SplitBySizeParameters;
+
 /**
  * Builder for {@link SplitBySizeParameters}
  * 

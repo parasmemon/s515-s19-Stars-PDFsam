@@ -83,7 +83,7 @@ public class AlternateMixModule extends BaseTaskExecutionModule {
 
     @Override
     public ModuleDescriptor descriptor() {
-        return descriptor;
+        return (ModuleDescriptor) descriptor.clone();
     }
 
     @Override

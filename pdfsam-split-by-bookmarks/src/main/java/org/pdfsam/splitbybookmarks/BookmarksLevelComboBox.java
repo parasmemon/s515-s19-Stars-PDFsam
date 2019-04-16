@@ -55,7 +55,7 @@ class BookmarksLevelComboBox extends ComboBox<String>
         getSelectionModel().selectFirst();
         valueProperty().addListener((o, oldVal, newVal) -> validate());
         validationSupport.validationStateProperty().addListener(o -> {
-            if (validationSupport.validationStateProperty().get() == ValidationState.INVALID) {
+            if (validationSupport.validationStateProperty().get().equals(ValidationState.INVALID)) {
                 getEditor().getStyleClass().addAll(Style.INVALID.css());
             } else {
                 getEditor().getStyleClass().removeAll(Style.INVALID.css());
@@ -100,7 +100,7 @@ class BookmarksLevelComboBox extends ComboBox<String>
     @Override
     public void apply(SplitByOutlineLevelParametersBuilder builder, Consumer<String> onError) {
         this.validate();
-        if (validationSupport.validationStateProperty().get() == ValidationState.VALID) {
+        if (validationSupport.validationStateProperty().get().equals(ValidationState.VALID)) {
             builder.level(Integer.parseInt(getValue()));
         } else {
             onError.accept(DefaultI18nContext.getInstance().i18n("Invalid bookmarks level"));
